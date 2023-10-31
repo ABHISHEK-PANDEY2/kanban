@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  box-sizing: border-box;
+  padding: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.category-name {
+  font-weight: 500;
+  color: #272a30;
+}
+
+.category-actions {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.category-actions .actions {
+  display: flex;
+  gap: 3px;
+}
+
+#ticket {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 400px;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  filter: drop-shadow(2px 2px 4px rgba(128, 128, 128, 0.323));
+}
+
+#ticket .content {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.content .header {
+  width: 100%;
+  color: #6b6f76;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .title {
+  font-weight: 600;
+}
+
+.tags {
+  color: #6b6f76;
+}
+
+.tags .tag {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  border: solid 1px #eef0f3;
+  border-radius: 5px;
+  padding: 5px;
+  width: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+#navbar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  height: 50px;
+  width: 100%;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu {
+  position: relative;
+  width: fit-content;
+  border: solid 2px #e8e9e6;
+  border-radius: 5px;
+  padding: 3px 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#filter {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: solid 2px #e8e9e6;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -115px;
+  z-index: 10000;
+  left: 0px;
+  background-color: white;
+  width: 250px;
+  filter: drop-shadow(2px 2px 4px rgba(128, 128, 128, 0.323));
+}
+
+.filter-category {
+  color: #6b6f76;
+  font-size: 0.9em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-category select {
+  font-weight: 600;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: solid 2px #d9d9d9;
+  border-radius: 5px;
+  padding: 5px;
+  width: fit-content;
 }
